@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/sm_bg">
+
+    <ImageButton
+        android:id="@+id/ib_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/ic_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+        android:id="@+id/text_input_layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="28dp"
+        android:layout_marginTop="48dp"
+        app:boxBackgroundMode="filled"
+        app:layout_constraintTop_toBottomOf="@+id/ib_icon">
+        <com.google.android.material.textfield.TextInputEditText
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/name"
+            android:fontFamily="@font/poppins_regular" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+        android:id="@+id/text_input_layout_palindrome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="28dp"
+        android:layout_marginTop="12dp"
+        app:boxBackgroundMode="filled"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_name">
+        <com.google.android.material.textfield.TextInputEditText
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+            android:id="@+id/et_palindrome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/palindrome"
+            android:fontFamily="@font/poppins_regular"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+        android:id="@+id/btn_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="28dp"
+        android:backgroundTint="#2B637B"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/check"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_palindrome" />
+
+    <com.google.android.material.button.MaterialButton
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="28dp"
+        android:backgroundTint="#2B637B"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/next"
+        app:layout_constraintTop_toBottomOf="@+id/btn_check" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
